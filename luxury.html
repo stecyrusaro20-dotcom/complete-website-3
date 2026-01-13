@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savor: Coastal Kitchen | Fine Dining & Chef's Suggestions</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font import for a warm, inviting look */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@100..900&display=swap');
+
+        /* Apply Playfair Display to headings and Inter to body text */
+        .font-serif-elegant {
+            font-family: 'Playfair Display', serif;
+        }
+        .font-sans-body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Deep, sophisticated accent color */
+        .text-savor-accent { color: #ca8a04; /* Warm Amber */ }
+        .bg-savor-accent { background-color: #ca8a04; }
+        .border-savor-accent { border-color: #ca8a04; }
+
+        /* Hero background simulation */
+        .hero-bg {
+            background-image: url('https://placehold.co/1920x1080/0e1628/ffffff?text=ELEGANT+RESTAURANT+INTERIOR');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="font-sans-body bg-gray-50 text-stone-800">
+
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 bg-white shadow-md/50 backdrop-blur-sm">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <h1 class="font-serif-elegant text-3xl font-bold text-stone-800 tracking-wider">
+                Savor: Coastal Kitchen
+            </h1>
+            <nav class="hidden md:flex space-x-8 text-lg font-medium">
+                <a href="#suggestions" class="hover:text-savor-accent transition duration-300">Suggestions</a>
+                <a href="#menu" class="hover:text-savor-accent transition duration-300">Full Menu</a>
+                <a href="#ambiance" class="hover:text-savor-accent transition duration-300">Ambiance</a>
+                <a href="#reservations" class="hover:text-savor-accent transition duration-300">Reservations</a>
+            </nav>
+            <button id="menu-button" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition duration-300">
+                <svg class="w-6 h-6 text-stone-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 pb-4 transition duration-300">
+            <nav class="flex flex-col items-center space-y-3 text-lg font-medium">
+                <a href="#suggestions" class="py-2 hover:text-savor-accent">Suggestions</a>
+                <a href="#menu" class="py-2 hover:text-savor-accent">Full Menu</a>
+                <a href="#ambiance" class="py-2 hover:text-savor-accent">Ambiance</a>
+                <a href="#reservations" class="py-2 hover:text-savor-accent">Reservations</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg h-[85vh] flex items-center justify-center text-center p-4">
+        <div class="bg-stone-800/85 p-8 md:p-16 rounded-xl shadow-2xl max-w-5xl border-b-4 border-savor-accent">
+            <p class="text-xl md:text-2xl text-savor-accent font-serif-elegant italic mb-4 tracking-widest uppercase">
+                An Invitation to Indulge
+            </p>
+            <h2 class="font-serif-elegant text-6xl md:text-8xl font-light text-white leading-tight">
+                Taste the Coast
+            </h2>
+            <p class="text-lg mt-6 max-w-xl mx-auto text-gray-300">
+                Savor is where fresh, local ingredients meet uncompromising culinary passion. Experience fine dining redefined.
+            </p>
+            <button onclick="document.getElementById('reservations-link').click()" class="mt-10 px-8 py-3 bg-savor-accent text-white text-lg font-semibold rounded-full shadow-lg hover:bg-amber-700 transition duration-300 transform hover:scale-[1.02]">
+                Book Your Table
+            </button>
+        </div>
+    </section>
+
+    <!-- Chef's Suggestions Section -->
+    <section id="suggestions" class="py-20 md:py-32 container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center mb-16">
+            <h3 class="font-serif-elegant text-4xl md:text-5xl font-light mb-4 text-stone-800">
+                The Chef's Current Obsessions
+            </h3>
+            <div class="w-20 h-1 bg-savor-accent mx-auto mb-6 rounded"></div>
+            <p class="text-xl text-gray-600 leading-relaxed">
+                Our kitchen is driven by the season. Here are the three dishes our Head Chef insists you try this week.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Suggestion 1: Grilled Halibut -->
+            <div class="bg-white rounded-xl shadow-xl overflow-hidden group hover:shadow-2xl transition duration-300">
+                <img src="https://placehold.co/600x400/808080/ffffff?text=PERFECTLY+GRILLED+FISH" alt="Perfectly Grilled Halibut" class="w-full h-64 object-cover object-center group-hover:scale-[1.05] transition duration-500" onerror="this.onerror=null; this.src='https://placehold.co/600x400/808080/ffffff?text=GRILLED+FISH';">
+                <div class="p-6">
+                    <h4 class="font-serif-elegant text-3xl font-bold mb-2 text-stone-800">
+                        Seared Halibut with Lemon-Dill
+                    </h4>
+                    <p class="text-savor-accent text-lg font-semibold mb-4">
+                        $42
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        **Chef's Note:** "A testament to simple excellence. We use wild-caught halibut, pan-seared to a crisp finish and finished with our house-made Meyer lemon butter and fresh dill from our garden." 
+                    </p>
+                    <span class="inline-block px-3 py-1 text-sm font-medium bg-gray-100 text-stone-700 rounded-full">Coastal Classic</span>
+                </div>
+            </div>
+
+            <!-- Suggestion 2: Braised Short Ribs -->
+            <div class="bg-white rounded-xl shadow-xl overflow-hidden group hover:shadow-2xl transition duration-300">
+                <img src="https://placehold.co/600x400/991b1b/ffffff?text=SLOW-BRAISED+SHORT+RIBS" alt="Slow-Braised Short Ribs" class="w-full h-64 object-cover object-center group-hover:scale-[1.05] transition duration-500" onerror="this.onerror=null; this.src='https://placehold.co/600x400/991b1b/ffffff?text=SHORT+RIBS';">
+                <div class="p-6">
+                    <h4 class="font-serif-elegant text-3xl font-bold mb-2 text-stone-800">
+                        Truffle-Glazed Short Rib
+                    </h4>
+                    <p class="text-savor-accent text-lg font-semibold mb-4">
+                        $48
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        **Chef's Note:** "A dish for true comfort. Beef short ribs braised for 12 hours in red wine, served over creamy polenta and finished with a subtle truffle reduction. It melts in your mouth." 
+                    </p>
+                    <span class="inline-block px-3 py-1 text-sm font-medium bg-gray-100 text-stone-700 rounded-full">Signature Dish</span>
+                </div>
+            </div>
+
+            <!-- Suggestion 3: Seasonal Dessert -->
+            <div class="bg-white rounded-xl shadow-xl overflow-hidden group hover:shadow-2xl transition duration-300">
+                <img src="https://placehold.co/600x400/f5e8c7/000000?text=ELEGANT+DESSERT" alt="Elegant Seasonal Dessert" class="w-full h-64 object-cover object-center group-hover:scale-[1.05] transition duration-500" onerror="this.onerror=null; this.src='https://placehold.co/600x400/f5e8c7/000000?text=DESSERT+PLATE';">
+                <div class="p-6">
+                    <h4 class="font-serif-elegant text-3xl font-bold mb-2 text-stone-800">
+                        Lavender Crème Brûlée
+                    </h4>
+                    <p class="text-savor-accent text-lg font-semibold mb-4">
+                        $15
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        **Chef's Note:** "A surprising finish. Delicate lavender infused into a rich custard, topped with a perfectly caramelized sugar crust. Light, aromatic, and unforgettable." 
+                    </p>
+                    <span class="inline-block px-3 py-1 text-sm font-medium bg-gray-100 text-stone-700 rounded-full">Sweet Finish</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Ambiance & Gallery Callout -->
+    <section id="ambiance" class="bg-stone-800 py-20 md:py-32 text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="font-serif-elegant text-4xl md:text-5xl font-light mb-6 text-white">
+                More Than a Meal, It's an Experience
+            </h3>
+            <p class="text-xl max-w-3xl mx-auto mb-12 text-gray-300">
+                Our dining room, bathed in soft lighting, offers sweeping views and a relaxed, elegant atmosphere perfect for any occasion, from intimate dinners to grand celebrations.
+            </p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
+                <div class="rounded-lg overflow-hidden shadow-xl aspect-square"><img src="https://placehold.co/400x400/ca8a04/ffffff?text=WINE+CELLAR" alt="Wine Cellar" class="w-full h-full object-cover"></div>
+                <div class="rounded-lg overflow-hidden shadow-xl aspect-square"><img src="https://placehold.co/400x400/808080/ffffff?text=OUTDOOR+PATIO" alt="Outdoor Patio" class="w-full h-full object-cover"></div>
+                <div class="rounded-lg overflow-hidden shadow-xl aspect-square"><img src="https://placehold.co/400x400/44403c/ffffff?text=BAR+AREA" alt="Bar Area" class="w-full h-full object-cover"></div>
+                <div class="rounded-lg overflow-hidden shadow-xl aspect-square"><img src="https://placehold.co/400x400/f5f5f4/000000?text=TABLE+SETTING" alt="Elegant Table Setting" class="w-full h-full object-cover"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservations/Contact Section -->
+    <section id="reservations" class="py-20 md:py-32 container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-xl mx-auto bg-white p-8 md:p-10 rounded-xl shadow-2xl border-t-4 border-savor-accent">
+            <h3 class="font-serif-elegant text-3xl font-light text-stone-800 mb-6 text-center">
+                Reserve Your Table
+            </h3>
+            <p class="text-center text-gray-600 mb-6">
+                Please use the form below to secure a reservation. We look forward to hosting you!
+            </p>
+
+            <form id="reservation-form" onsubmit="handleReservation(event)">
+                <div class="space-y-4">
+                    <div>
+                        <label for="res-name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                        <input type="text" id="res-name" required class="mt-1 w-full p-3 border border-gray-300 rounded-lg focus:ring-savor-accent focus:border-savor-accent">
+                    </div>
+                    <div>
+                        <label for="res-date" class="block text-sm font-medium text-gray-700">Date</label>
+                        <input type="date" id="res-date" required class="mt-1 w-full p-3 border border-gray-300 rounded-lg focus:ring-savor-accent focus:border-savor-accent">
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label for="res-time" class="block text-sm font-medium text-gray-700">Time</label>
+                            <input type="time" id="res-time" required class="mt-1 w-full p-3 border border-gray-300 rounded-lg focus:ring-savor-accent focus:border-savor-accent">
+                        </div>
+                        <div>
+                            <label for="res-guests" class="block text-sm font-medium text-gray-700">Guests</label>
+                            <input type="number" id="res-guests" min="1" max="10" value="2" required class="mt-1 w-full p-3 border border-gray-300 rounded-lg focus:ring-savor-accent focus:border-savor-accent">
+                        </div>
+                    </div>
+                    
+                    <p id="reservation-message" class="text-sm pt-2 font-medium"></p>
+
+                    <button type="submit" class="w-full py-3 bg-savor-accent text-white text-lg font-semibold rounded-lg shadow-lg hover:bg-amber-700 transition duration-300 mt-6">
+                        Confirm Reservation
+                    </button>
+                </div>
+            </form>
+            <p class="mt-6 text-center text-sm text-gray-500">
+                For parties larger than 10, please call us at (555) 777-SA-VOR.
+            </p>
+        </div>
+        
+        <!-- Placeholder link for reservation button logic -->
+        <a id="reservations-link" href="#reservations" class="hidden"></a> 
+
+    </section>
+    
+    <!-- Menu Section (Simplified placeholder) -->
+    <section id="menu" class="bg-gray-100 py-20 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h3 class="font-serif-elegant text-4xl md:text-5xl font-light mb-6 text-stone-800">
+            View Our Full Seasonal Menu
+        </h3>
+        <p class="text-lg max-w-3xl mx-auto mb-10 text-gray-600">
+            Our full menu features an array of appetizers, fresh pastas, prime cuts, and house-made desserts. Click below to explore all offerings.
+        </p>
+        <button class="px-8 py-3 border-2 border-savor-accent text-savor-accent text-lg font-semibold rounded-full hover:bg-savor-accent hover:text-white transition duration-300">
+            Download PDF Menu
+        </button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-800 py-12 border-t border-gray-700 text-gray-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-10">
+            <!-- Column 1: Logo & Mission -->
+            <div>
+                <h4 class="font-serif-elegant text-2xl font-bold text-white mb-4">Savor</h4>
+                <p class="text-sm">Coastal excellence, culinary passion. Open daily for dinner.</p>
+            </div>
+            <!-- Column 2: Hours -->
+            <div>
+                <h4 class="text-lg font-semibold text-white mb-4">Hours</h4>
+                <p>Mon - Thu: 5:00 PM - 10:00 PM</p>
+                <p>Fri - Sat: 5:00 PM - 11:00 PM</p>
+                <p>Sunday: Closed for Private Events</p>
+            </div>
+            <!-- Column 3: Contact -->
+            <div>
+                <h4 class="text-lg font-semibold text-white mb-4">Contact & Location</h4>
+                <p>rebero</p>
+                <p class="mt-2">Phone: +250784456789</p>
+                <p>Email: <a href="mailto:info@savorcoastal.com" class="hover:text-savor-accent transition duration-200">info@savorcoastal.com</a></p>
+            </div>
+            <!-- Column 4: Follow Us -->
+            <div>
+                <h4 class="text-lg font-semibold text-white mb-4">Follow Us</h4>
+                <div class="flex space-x-4 text-2xl">
+                    <a href="#" class="hover:text-savor-accent transition duration-200" aria-label="Facebook">FB</a>
+                    <a href="#" class="hover:text-savor-accent transition duration-200" aria-label="Instagram">IG</a>
+                    <a href="#" class="hover:text-savor-accent transition duration-200" aria-label="X/Twitter">X</a>
+                </div>
+            </div>
+        </div>
+        <div class="mt-10 pt-6 border-t border-gray-700 text-center text-sm text-gray-500">
+            &copy; 2025 Savor: Coastal Kitchen. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // --- UI & UTILITY FUNCTIONS ---
+        
+        // JavaScript for mobile menu toggle
+        document.getElementById('menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Hide mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Simple Reservation Form Handler
+        window.handleReservation = function(event) {
+            event.preventDefault();
+            
+            const form = document.getElementById('reservation-form');
+            const messageElement = document.getElementById('reservation-message');
+            
+            const name = document.getElementById('res-name').value;
+            const date = document.getElementById('res-date').value;
+            const time = document.getElementById('res-time').value;
+            const guests = document.getElementById('res-guests').value;
+
+            // Clear previous messages
+            messageElement.classList.remove('text-red-600', 'text-green-600');
+            messageElement.innerText = "";
+            
+            // Basic Validation
+            if (new Date(date) < new Date() || guests < 1) {
+                messageElement.classList.add('text-red-600');
+                messageElement.innerText = "Please select a future date and a valid number of guests.";
+                return;
+            }
+
+            // Simulate API Call/Processing
+            messageElement.classList.add('text-gray-500');
+            messageElement.innerText = `Securing reservation for ${name}...`;
+
+            setTimeout(() => {
+                messageElement.classList.remove('text-gray-500');
+                messageElement.classList.add('text-green-600');
+                messageElement.innerHTML = `
+                    **Success!** Your table for ${guests} guests on ${date} at ${time} is confirmed.<br>
+                    A confirmation email has been sent.
+                `;
+                form.reset();
+            }, 1500); 
+        }
+        
+    </script>
+</body>
+</html>
